@@ -87,3 +87,15 @@ Team Members
 
   🎯CONCLUSION.....
      Smart Lender is a machine learning-powered web application that automates and accelerates the loan approval process for financial institutions. By evaluating key applicant data through various classification models, the XGBoost algorithm emerged as the top performer, achieving a high 94.7% training accuracy and 81.1% testing accuracy. Seamlessly integrated into a user-friendly Flask web interface, this predictive system allows credit officers to input applicant details and instantly receive real-time approval predictions. Ultimately, this digital solution streamlines banking operations by fast-tracking low-risk applications while proactively mitigating financial risks by flagging high-risk defaults.
+
+
+
+
+--------------------------------------------------------------------
+             ⭐ Thank You!
+Thank you for visiting our project repository.
+
+If you found this project useful,
+
+       ⭐ Please Star this Repository ⭐
+Made with ❤️ using Python, Flask, and Machine Learning.
