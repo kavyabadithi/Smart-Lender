@@ -4,7 +4,7 @@ import numpy as np
 
 app = Flask(__name__)
 
-model = joblib.load("loan_model.pkl")
+model = joblib.load("models/loan_model.pkl")
 label_encoders = joblib.load("label_encoders.pkl")
 
 @app.route("/")
