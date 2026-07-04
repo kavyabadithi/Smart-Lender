@@ -5,7 +5,7 @@ import numpy as np
 app = Flask(__name__)
 
 model = joblib.load("models/loan_model.pkl")
-label_encoders = joblib.load("label_encoders.pkl")
+label_encoders = joblib.load("models/label_encoders.pkl")
 
 @app.route("/")
 def home():
@@ -33,12 +33,15 @@ def predict():
         "ApplicantIncome", "CoapplicantIncome", "LoanAmount",
         "Loan_Amount_Term", "Credit_History", "Property_Area"
     ]:
-        if key in label_encoders:
+        if key == "Credit_History":
+            features.append(1.0 if input_data[key] == "Yes" else 0.0)
+        elif key in label_encoders:
             features.append(label_encoders[key].transform([input_data[key]])[0])
         else:
             features.append(input_data[key])
 
-    prediction = model.predict([features])
+    feature_array = np.array(features, dtype=float).reshape(1, -1)
+    prediction = model.predict(feature_array)
 
     if prediction[0] == 1:
         result = "Loan Approved"
