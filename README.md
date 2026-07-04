@@ -31,17 +31,20 @@ Smart Lender is a Machine Learning based web application that predicts whether a
 Smart-Lender/
 │── app.py
 │── train_model.py
-│── dataset.csv
-│── loan_model.pkl
-│── label_encoders.pkl
 │── requirements.txt
+│── runtime.txt
 │── README.md
+│── models/
+│     ├── loan_model.pkl
+│     └── label_encoders.pkl
 │
 ├── templates/
 │     ├── index.html
+│     ├── proctfile
 │     └── result.html
 │
-└── static/
+└── templates/static/
+      ├── dataset.csv
       └── style.css
 ```
 
